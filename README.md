@@ -68,7 +68,9 @@
         function verificarResposta() {
             const resposta = document.querySelector('#resposta').value.toLowerCase();
             if (resposta === "sofia") {
+                document.querySelector('#misterio').style.display = 'none';
                 document.querySelector('#localizacao').style.display = 'block';
+                document.querySelector('#localizacao').innerHTML = "Mande uma mensagem para Eni chamando ela de <b>Tia</b>";
             } else {
                 alert("Resposta incorreta. Tente novamente.");
             }
@@ -80,29 +82,24 @@
     <button onclick="iniciarJornada()">Iniciar Jornada</button>
     
     <div id="senha-container">
-        <p>Digite a senha para acessar:</p>
-        <input type="text" id="senha" placeholder="Digite a senha">
+        <p>Digite a senha para continuar:</p>
+        <input type="text" id="senha">
         <button onclick="verificarSenha()">Entrar</button>
     </div>
-
+    
     <div id="conteudo">
-        <h2>Querida Kamilly,</h2>
-        <p>Você é uma pessoa incrível, e sua luz ilumina a vida de todos ao seu redor. Seu sorriso contagia, sua força inspira, e sua bondade transforma. Hoje é um dia especial para celebrar o quanto você é amada e importante para todos nós. Obrigado por ser essa pessoa tão maravilhosa. Feliz aniversário! 🎉💕</p>
-        
-        <iframe src="https://www.youtube.com/embed/OMPVAZIs_sE" allowfullscreen></iframe>
-        
+        <h2>Feliz Aniversário Kamilly!</h2>
+        <p>Você é muito especial e essencial na vida de todos nós!</p>
+        <iframe src="https://youtu.be/OMPVAZIs_sE" allowfullscreen></iframe>
         <h2>Hora do Mistério</h2>
-        <p>Em cada nota, uma lembrança, <br>
-           Cantamos juntos, como uma dança. <br>
-           Uma canção que nos faz sorrir, <br>
-           Nosso amor, ela faz sentir.</p>
-        
-        <input type="text" id="resposta" placeholder="Digite a resposta">
-        <button onclick="verificarResposta()">Verificar</button>
-
-        <div id="localizacao">
-            <p>Parabéns! Você acertou! Agora siga para o próximo destino.</p>
-        </div>
+        <p>Em cada nota, uma lembrança,<br>
+        Cantamos juntos, como uma dança.<br>
+        Uma canção que nos faz sorrir,<br>
+        Nosso amor, ela faz sentir.</p>
+        <input type="text" id="resposta">
+        <button onclick="verificarResposta()">Responder</button>
     </div>
+    
+    <div id="localizacao"></div>
 </body>
 </html>
