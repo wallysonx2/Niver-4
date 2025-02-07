@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jornada do meu Aniversário</title>
+    <title>Jornada do Meu Aniversário</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,7 +71,6 @@
             if (resposta === "sofia") {
                 document.querySelector('#misterio').style.display = 'none';
                 document.querySelector('#localizacao').style.display = 'block';
-                document.querySelector('#localizacao').innerHTML = "Mande uma mensagem para Eni chamando ela de <b>Tia</b>";
             } else {
                 alert("Resposta incorreta. Tente novamente.");
             }
@@ -78,28 +78,35 @@
     </script>
 </head>
 <body>
-    <h1>Mensagem Especial</h1>
+    <h1>Jornada do Meu Aniversário</h1>
     <button onclick="iniciarJornada()">Iniciar Jornada</button>
     
     <div id="senha-container">
-        <p>Digite a senha para continuar:</p>
+        <h2>Digite a senha para continuar:</h2>
         <input type="text" id="senha">
         <button onclick="verificarSenha()">Entrar</button>
     </div>
-    
+
     <div id="conteudo">
-        <h2>Feliz Aniversário Kamilly!</h2>
-        <p>Você é muito especial e essencial na vida de todos nós!</p>
-        <iframe src="https://youtu.be/OMPVAZIs_sE" allowfullscreen></iframe>
-        <h2>Hora do Mistério</h2>
-        <p>Em cada nota, uma lembrança,<br>
-        Cantamos juntos, como uma dança.<br>
-        Uma canção que nos faz sorrir,<br>
-        Nosso amor, ela faz sentir.</p>
-        <input type="text" id="resposta">
-        <button onclick="verificarResposta()">Responder</button>
+        <h2>Mensagem Especial</h2>
+        <p>Você é uma pessoa incrível e essencial na vida de todos nós. Cada momento ao seu lado é único e especial. Esperamos que essa jornada traga alegria e muitas memórias inesquecíveis. 💖</p>
+        
+        <iframe src="https://www.youtube.com/embed/OMPVAZIs_sE" allowfullscreen></iframe>
+        
+        <div id="misterio">
+            <h2>Hora do Mistério</h2>
+            <p>Em cada nota, uma lembrança,<br>
+               Cantamos juntos, como uma dança.<br>
+               Uma canção que nos faz sorrir,<br>
+               Nosso amor, ela faz sentir.</p>
+            <input type="text" id="resposta">
+            <button onclick="verificarResposta()">Responder</button>
+        </div>
+
+        <div id="localizacao">
+            <h2>Parabéns! Você acertou!</h2>
+            <p>Mande uma mensagem para Eni chamando ela de <strong>Tia</strong></p>
+        </div>
     </div>
-    
-    <div id="localizacao"></div>
 </body>
 </html>
